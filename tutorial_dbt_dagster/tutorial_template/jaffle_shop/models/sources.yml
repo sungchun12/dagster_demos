@@ -1,0 +1,11 @@
+## Refer to Using dbt with Dagster, part one for info about this file:
+## https://docs.dagster.io/integrations/dbt/using-dbt-with-dagster/part-one
+# /tutorial_template/jaffle_shop/models/sources.yml
+
+version: 2
+
+sources:
+  - name: jaffle_shop
+    tables:
+      - name: orders_raw
+      - name: customers_raw
