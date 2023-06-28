@@ -21,8 +21,9 @@ DBT_PROFILES = file_relative_path(__file__, "../../jaffle_shop/config")
 
 # if larger project use load_assets_from_dbt_manifest
 # dbt_assets = load_assets_from_dbt_manifest(json.load(DBT_PROJECT_PATH + "manifest.json", encoding="utf8"))
+# https://docs.dagster.io/_apidocs/libraries/dagster-dbt#assets-dbt-core
 dbt_assets = load_assets_from_dbt_project(
-    project_dir=DBT_PROJECT_PATH, profiles_dir=DBT_PROFILES, key_prefix=["jaffle_shop"]
+    project_dir=DBT_PROJECT_PATH, profiles_dir=DBT_PROFILES, key_prefix=["jaffle_shop"], use_build_command=True
 )
 
 
